@@ -2,6 +2,7 @@ package com.agan.springboot.controller;
 
 import com.agan.springboot.model.Student;
 import com.agan.springboot.service.StudentService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,7 +16,7 @@ public class StudentController {
     StudentService studentService;
 
     @PostMapping("/save")
-    ResponseEntity<String> addStudent(@RequestBody Student student) {
+    ResponseEntity<String> addStudent(@RequestBody @Valid Student student) {
         studentService.save(student);
         return ResponseEntity.ok("Student saved !");
     }
