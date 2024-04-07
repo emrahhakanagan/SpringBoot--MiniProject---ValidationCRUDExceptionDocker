@@ -1,6 +1,6 @@
 package com.agan.springboot.service;
 
-import com.agan.springboot.model.Student;
+import com.agan.springboot.entity.Student;
 import com.agan.springboot.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,8 +11,8 @@ public class StudentService {
     @Autowired
     private StudentRepository studentRepository;
 
-    public void save(Student student) {
-        studentRepository.save(student);
+    public Student addStudent(Student student) {
+        return studentRepository.save(student);
     }
 
 
