@@ -29,7 +29,7 @@ public class Student {
     @Email(message = "Email should be valid")
     private String email;
 
-    @Min(value = 3, message = "Cannot be younger than 18 years old")
+    @Min(value = 18, message = "Cannot be younger than 18 years old")
     private int age;
 
     @Pattern(regexp = "[0-9\\s]{12}")
