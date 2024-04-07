@@ -1,6 +1,6 @@
 package com.agan.springboot.controller;
 
-import com.agan.springboot.model.Student;
+import com.agan.springboot.entity.Student;
 import com.agan.springboot.service.StudentService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

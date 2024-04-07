@@ -6,8 +6,15 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 @Data
+// ***
+// default active (included) by @Data next annotations;
+// @Getter, @Setter, @toStrong, @EqualsAndHashCode, @RequiredArgsConstructor
+// ***
 @Entity
 public class Student {
 
