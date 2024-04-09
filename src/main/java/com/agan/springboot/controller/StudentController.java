@@ -29,7 +29,6 @@ public class StudentController {
         (student.getLastName().isEmpty() || student.getLastName().isBlank())) {
             throw new StudentNotNullException("Student name and surname must be not null");
         }
-
         Student addStudent = studentService.addStudent(student);
         return new ResponseEntity<Student>(addStudent, HttpStatus.CREATED);
     }
@@ -57,7 +56,8 @@ public class StudentController {
     public ResponseEntity<Void> deleteStudentById(@PathVariable("id") Long id) {
         Optional<Student> optionalStudent = studentRepository.findById(id);
         optionalStudent.orElseThrow(() -> new StudentNotFoundException("Student id: " + id + " do not delete!"));
-        
+
+        studentService.deleteStudentById(id);
         return new ResponseEntity<Void>(HttpStatus.ACCEPTED);
     }
 
