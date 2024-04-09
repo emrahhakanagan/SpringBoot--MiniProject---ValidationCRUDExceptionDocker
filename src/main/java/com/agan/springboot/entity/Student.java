@@ -4,11 +4,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.validation.constraints.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 
 @Data
 // ***
@@ -22,12 +22,12 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @NotNull(message = "Must be not null")
-    @Size(min = 3)
+//    @NotNull(message = "Must be not null")
+//    @Size(min = 3)
     private String firstName;
 
-    @NotNull
-    @Size(min = 3)
+//    @NotNull(message = "Must be not null")
+//    @Size(min = 3)
     private String lastName;
 
     @NotBlank(message = "Must be not blank")
