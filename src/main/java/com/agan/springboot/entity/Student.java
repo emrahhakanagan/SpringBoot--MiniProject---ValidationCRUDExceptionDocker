@@ -22,12 +22,12 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @NotNull(message = "Must be not null")
-    @Size(min = 3)
+//    @NotNull(message = "Must be not null")
+//    @Size(min = 3)
     private String firstName;
 
-    @NotNull
-    @Size(min = 3)
+//    @NotNull(message = "Must be not null")
+//    @Size(min = 3)
     private String lastName;
 
     @NotBlank(message = "Must be not blank")
